@@ -13,6 +13,7 @@ Select algorithm in config rather than allowing Cygwin to prompt
 Rename scripts to drop the GPG part
 Automated test
 Robot existing contributor for test exercise on github project
+Select appropriate model to avoid trust warning
 
 Intended use
 ============
@@ -148,6 +149,25 @@ Exported public key: -rw-r--r-- 1 antony None 1690 Nov 30 11:45 test5@example.co
 
 antony@ANTONYCARTWC7BC ~/projects/gpg-test
 $ 
+
+
+Encrypt (OS X)
+==============
+
+Encrypting for recipients: "--recipient "test2 <test2@example.com>" --recipient "test3 <test3@example.com>" --recipient "test5 <test5@example.com>" "
+gpg --options gpg-options.conf --encrypt --recipient "test2 <test2@example.com>" --recipient "test3 <test3@example.com>" --recipient "test5 <test5@example.com>" credentials.txt
+gpg: using PGP trust model
+gpg: using subkey 184C8FE5 instead of primary key E120B7C3
+gpg: 184C8FE5: There is no assurance this key belongs to the named user
+sub  rsa2048/184C8FE5 2015-11-30 test5 <test5@example.com>
+ Primary key fingerprint: D78F 736D 6BBC 41DA 3C67  9F4A 8E1F 0880 E120 B7C3
+      Subkey fingerprint: 7A4F AD1C F269 3109 BAC3  FD07 218B 11F4 184C 8FE5
+
+It is NOT certain that the key belongs to the person named
+in the user ID.  If you *really* know what you are doing,
+you may answer the next question with yes.
+
+Use this key anyway? (y/N) 
 
 
 
