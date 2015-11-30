@@ -4,5 +4,7 @@
 ls -1 *.public |
 while read PUBLIC_KEY_FILE
 do
-   gpg --options gpg-options.conf --import ${PUBLIC_KEY_FILE?}
+   CMD="gpg --options gpg-options.conf --import \"${PUBLIC_KEY_FILE?}\""
+   echo $CMD
+   eval $CMD
 done

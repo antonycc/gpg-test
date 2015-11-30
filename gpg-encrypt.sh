@@ -5,4 +5,5 @@
 RECIPIENTS=$( cat gpg-recipients.txt | tr "\n" " " )
 echo "Encrypting for recipients: \"${RECIPIENTS}\""
 CMD="gpg --options gpg-options.conf --encrypt ${RECIPIENTS?} credentials.txt"
+echo $CMD
 eval $CMD
