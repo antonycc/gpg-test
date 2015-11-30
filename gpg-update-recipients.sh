@@ -4,7 +4,7 @@
 echo "Available key pairs:"
 gpg --options gpg-options.conf --list-keys | grep -e "^uid" | cat -n
 echo -n "Enter the number of the key pair to add: " ; read KEYPAIR_NUMBER
-KEYPAIR_UID=$( gpg --options gpg-options.conf --list-keys | grep -e "^uid" | sed "${KEYPAIR_NUMBER?}q;d" | sed "s/^[^]]*][[:space:]]*//" )
+KEYPAIR_UID=$( gpg --options gpg-options.conf --list-keys | grep -e "^uid" | sed "${KEYPAIR_NUMBER?}q;d" | sed "s/^[^]]*][[:space:]]*//" | sed "s/^uid[[:space:]]*//" )
 echo "Selected UID: \"${KEYPAIR_UID?}\""
 KEYPAIR_EMAIL=$( echo "${KEYPAIR_UID?}" | sed "s/^[^<]*<//" | sed "s/>//" )
 echo "Any matching email addresses matching ${KEYPAIR_EMAIL?} in the signers list will be removed:"

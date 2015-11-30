@@ -1,5 +1,19 @@
 # gpg-test
 
+TODO
+====
+
+Parametrise encryption and decryption and allow target files to be in an arbitary location
+Add decrypt to environment variables
+Single script for generate and export
+Single script for import, update recipients, decrypt, encrypt
+Move scripts and config to sub-folder and allow invocation from arbitrary location
+Specify key size in config (Cygwin's gnupg takes up to 4096 on the command line)
+Select algorithm in config rather than allowing Cygwin to prompt
+Rename scripts to drop the GPG part
+Automated test
+Robot existing contributor for test exercise on github project
+
 Intended use
 ============
 
@@ -12,17 +26,19 @@ Initial project set up
 New contributor on-boarding
 ==========================
 
- 1. [Existing contributor] Invites [New contributor] to join the project
- 2. [New contributor] Clone project from shared repository into workspace
- 3. [New contributor] Generate keypair (RSA and RSA, 2048)
- 4. [New contributor] Export public key
- 5. [New contributor] Add public key to shared repository
- 6. [Existing contributor] Update workspace from shared repository
- 7. [Existing contributor] Import public key into local keychain
- 8. [Existing contributor] Decrypt sensitive material and re-encrypts using current public keys
- 9. [Existing contributor] Update shared repository with encrypted sensitive material
-10. [New contributor] Update workspace from shared repository
-11. [New contributor] Decrypt sensitive material in workspace
+1.0 [Existing contributor] Invites [New contributor] to join the project
+2.0 [New contributor] Clone project from shared repository into workspace
+2.1 [New contributor] Generate keypair (RSA and RSA, 2048)
+2.2 [New contributor] Export public key
+2.3 [New contributor] Update list of contributors with current
+2.4 [New contributor] Add public key to shared repository
+3.0 [Existing contributor] Update workspace from shared repository
+3.1 [Existing contributor] Import public key into local keychain
+3.2 [Existing contributor] Decrypt sensitive material
+3.3 [Existing contributor] Encrypts using current public keys
+3.4 [Existing contributor] Update shared repository with encrypted sensitive material
+4.0 [New contributor] Update workspace from shared repository
+4.1 [New contributor] Decrypt sensitive material in workspace
 
 
 
