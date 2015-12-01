@@ -31,22 +31,23 @@ Initial project set up
 New contributor on-boarding
 ==========================
 
-1.0 [Existing contributor] Invites [New contributor] to join the project
-2.0 [New contributor] Clone project from shared repository into workspace
-2.1 [New contributor] Generate keypair (RSA and RSA, 2048)
-2.2 [New contributor] Export public key
-2.3 [New contributor] Update list of contributors with current
-2.4 [New contributor] Add public key to shared repository
-3.0 [Existing contributor] Update workspace from shared repository
-3.1 [Existing contributor] Import public key into local keychain
-3.2 [Existing contributor] Decrypt sensitive material
-3.3 [Existing contributor] Encrypts using current public keys
-3.4 [Existing contributor] Update shared repository with encrypted sensitive material
-4.0 [New contributor] Update workspace from shared repository
-4.1 [New contributor] Decrypt sensitive material in workspace
-
-
-
+1. Existing contributor: 
+  * Invites [New contributor] to join the project
+1. New contributor: 
+	* Clone project from shared repository into workspace
+	* Generate keypair (RSA and RSA, 2048)
+	* Export public key
+	* Update list of contributors with current
+	* Add public key to shared repository
+1. Existing contributor: 
+	* Update workspace from shared repository
+	* Import public key into local keychain
+	* Decrypt sensitive material
+	* Encrypts using current public keys
+	* Update shared repository with encrypted sensitive material
+4. New contributor:
+	* Update workspace from shared repository
+	* Decrypt sensitive material in workspace
 
 Test secure storage of sensitive information using public private keys
 Docs:
