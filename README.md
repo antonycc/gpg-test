@@ -14,7 +14,6 @@ Rename scripts to drop the GPG part
 Automated test
 Robot existing contributor for test exercise on github project
 Select appropriate model to avoid trust warning
-Extract examples into platform specific documents (OS X, Ubuntu, Cygwin)
 
 Intended use
 ============
@@ -170,32 +169,7 @@ you may answer the next question with yes.
 
 Use this key anyway? (y/N) 
 
-Decrypt (Cygwin)
-================
 
-antony@ANTONYCARTWC7BC ~/projects/gpg-test
-$ ./gpg-decrypt.sh
-gpg --options gpg-options.conf --output credentials.txt --decrypt credentials.txt.asc
-gpg: armor header: Version: GnuPG v2
-gpg: public key is 2BA31D8D
-gpg: public key is F870AF97
-gpg: public key is 184C8FE5
-gpg: using subkey 184C8FE5 instead of primary key E120B7C3
-
-You need a passphrase to unlock the secret key for
-user: "test5 <test5@example.com>"
-gpg: using subkey 184C8FE5 instead of primary key E120B7C3
-2048-bit RSA key, ID 184C8FE5, created 2015-11-30 (main key ID E120B7C3)
-
-gpg: encrypted with RSA key, ID F870AF97
-gpg: encrypted with RSA key, ID 2BA31D8D
-gpg: encrypted with 2048-bit RSA key, ID 184C8FE5, created 2015-11-30
-      "test5 <test5@example.com>"
-gpg: AES256 encrypted data
-gpg: original file name='credentials.txt'
-
-antony@ANTONYCARTWC7BC ~/projects/gpg-test
-$
 
 
 
