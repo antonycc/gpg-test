@@ -1,32 +1,35 @@
-# gpg-test
+gpg-test
+==
+A set of wrapper scripts and common config to create a confidential circle of trust between a group. The initial Use Case is sharing of credentials which are used privately in a local workspace and stored in a public/untrusted location.
+
+Todate this project is an exploration of the PGP tool. When (if) mature scripted tests will accompany the project to aid extension without regression.
 
 TODO
-====
-
-Parametrise encryption and decryption and allow target files to be in an arbitary location
-Add decrypt to environment variables
-Single script for generate and export
-Single script for import, update recipients, decrypt, encrypt
-Move scripts and config to sub-folder and allow invocation from arbitrary location
-Specify key size in config (Cygwin's gnupg takes up to 4096 on the command line)
-Select algorithm in config rather than allowing Cygwin to prompt
-Rename scripts to drop the GPG part
-Automated test
-Robot existing contributor for test exercise on github project
-Select appropriate model to avoid trust warning
-Extract examples into platform specific documents (OS X, Ubuntu, Cygwin)
-
-Intended use
-============
-
-Share common credentials
+==
+- Parametrise encryption and decryption and allow target files to be in an arbitrary location
+- Add decrypt to environment variables
+- Single script for generate and export
+- Single script for import, update recipients, decrypt, encrypt
+- Move scripts and config to sub-folder and allow invocation from arbitrary location
+- Specify key size in config (Cygwin's gnupg takes up to 4096 on the command line)
+- Select algorithm in config rather than allowing Cygwin to prompt
+- Rename scripts to drop the GPG part
+- Automated test
+- Robot existing contributor for test exercise on github project
+- Select appropriate model to avoid trust warning
+- Extract examples into platform specific documents (OS X, Ubuntu, Cygwin)
 
 Initial project set up
-======================
-
+==
+The files and structures in this project are decorators for an enclosing project. The idea is that when a team needs to share a secret, structures from this project are copied into there own project. The following steps are taken to use these project:
+- TODO
+- 
 
 New contributor on-boarding
 ==========================
+
+
+
 
 1.0 [Existing contributor] Invites [New contributor] to join the project
 2.0 [New contributor] Clone project from shared repository into workspace
