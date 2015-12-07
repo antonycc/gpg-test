@@ -62,7 +62,7 @@ Examples - Cygwin
 ==
 Cygwin examples captured using:
 
-    TODO
+    CYGWIN_NT-6.3 ANTONYCARTWC7BC 2.3.1(0.291/5/3) 2015-11-14 12:44 x86_64 Cygwin
 
 
 Generating a keypair (2)
