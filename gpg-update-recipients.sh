@@ -9,6 +9,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 RECIPIENTS_FILE="${DIR?}/gpg-recipients.txt"
 OPTIONS_FILE="${DIR?}/gpg-options.conf"
+TMP_FILE="./tmp_${RANDOM?}"
 
 echo "Available key pairs:"
 gpg --options gpg-options.conf --list-keys | grep -e "^uid" | cat -n
@@ -26,10 +27,10 @@ else
 fi
 if [ "${Y_TO_PROCEED?}" == "Y" ] ;
 then
-   mv "${RECIPIENTS?}" "${RECIPIENTS?}.tmp"
-   cat "${RECIPIENTS?}.tmp" | grep -v "${KEYPAIR_EMAIL?}" > "${RECIPIENTS?}"
+   mv "${RECIPIENTS?}" "${TMP_FILE?}"
+   cat "${TMP_FILE?}" | grep -v "${KEYPAIR_EMAIL?}" > "${RECIPIENTS?}"
    echo "--recipient \"${KEYPAIR_UID?}\"" >> "${RECIPIENTS?}"
-   rm "${RECIPIENTS?}.tmp"
+   rm "${TMP_FILE?}"
 fi
 echo "Current signers:"
 cat "${RECIPIENTS?}"

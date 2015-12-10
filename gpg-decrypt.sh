@@ -10,7 +10,7 @@ FILE_CLEAR=${1?}
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 OPTIONS_FILE="${DIR?}/gpg-options.conf"
 
-CMD="gpg --options \"${OPTIONS_FILE?}\" --output \"${FILE_CLEAR?}\" --decrypt \"${FILE_CLEAR?}.asc\""
+CMD="gpg --options \"${OPTIONS_FILE?}\" --output \"${FILE_CLEAR?}\" --decrypt \"${FILE_CLEAR?}.gpg\""
 echo $CMD
 eval $CMD
 

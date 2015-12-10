@@ -6,18 +6,21 @@ Todate this project is an exploration of the PGP tool. When (if) mature scripted
 
 TODO
 ==
-- Parametrise encryption and decryption and allow target files to be in an arbitrary location
-- Add decrypt to environment variables
-- Single script for generate and export
-- Single script for import, update recipients, decrypt, encrypt
-- Move scripts and config to sub-folder and allow invocation from arbitrary location
+- Move scripts and config to sub-folder
+- Rename scripts to drop the GPG part
 - Specify key size in config (Cygwin's gnupg takes up to 4096 on the command line)
 - Select algorithm in config rather than allowing Cygwin to prompt
-- Rename scripts to drop the GPG part
-- Automated test
-- Robot existing contributor for test exercise on github project
 - Select appropriate model to avoid trust warning
 - Extract examples into platform specific documents (OS X, Ubuntu, Cygwin)
+- Automated test (generate,export,update->encrypt->decrypt)
+- Robot existing contributor for test exercise on github project
+
+Done (to test)
+==
+- Decrypt to environment variables
+- Parametrise encryption and decryption and allow target files to be in an arbitrary location
+- Allow invocation from arbitrary location
+- Single script for generate and export and update recipients
 
 Initial project set up
 ==
@@ -27,25 +30,24 @@ The files and structures in this project are decorators for an enclosing project
 
 New contributor on-boarding
 ==
-1. [Existing contributor]
-- Invites [New contributor] to join the project
-1. [New contributor]
+1 [New contributor]
+--
 - Clones project from shared repository into workspace
 - Generates keypair (RSA and RSA, 2048)
 - Exports public key
-- Updates list of contributors with current
+- Updates list of contributors with generated key
 - Adds public key to shared repository
-1. [Existing contributor]
+2 [Existing contributor]
+--
 - Updates workspace from shared repository
 - Imports public key into local keychain
 - Decrypts sensitive material
 - Encrypts using current public keys
 - Updates shared repository with encrypted sensitive material
-1. [New contributor] 
+--
+3 [New contributor] 
 - Updates workspace from shared repository
 - Decrypts sensitive material in workspace
-
-
 
 
 Test secure storage of sensitive information using public private keys

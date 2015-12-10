@@ -11,4 +11,4 @@ OPTIONS_FILE="${DIR?}/gpg-options.conf"
 
 CMD="gpg --options \"${OPTIONS_FILE?}\" --gen-key"
 echo $CMD
-#eval $CMD
+eval $CMD

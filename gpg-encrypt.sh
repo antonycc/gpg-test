@@ -14,6 +14,6 @@ OPTIONS_FILE="${DIR?}/gpg-options.conf"
 
 RECIPIENTS=$( cat "${RECIPIENTS_FILE?}" | tr "\n" " " )
 echo "Encrypting for recipients: \"${RECIPIENTS}\""
-CMD="gpg --options \"${OPTIONS_FILE?}\" --encrypt \"${RECIPIENTS?}\" \"${FILE_CLEAR?}\""
+CMD="gpg --options \"${OPTIONS_FILE?}\" --output \"${FILE_CLEAR?}.gpg\" --encrypt \"${RECIPIENTS?}\" \"${FILE_CLEAR?}\""
 echo $CMD
 eval $CMD
