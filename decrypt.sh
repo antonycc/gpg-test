@@ -1,7 +1,7 @@
 #!/bin/bash
 # Purpose: Decrypt using one of the key pairs in the local key chain
-# Usage: gpg-decrypt.sh <clear file>
-# e.g. ./gpg-decrypt.sh credentials.txt
+# Usage: decrypt.sh <clear file>
+# e.g. ./decrypt.sh credentials.txt
 
 # Parameters
 FILE_CLEAR=${1?}

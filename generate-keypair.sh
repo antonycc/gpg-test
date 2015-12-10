@@ -1,7 +1,7 @@
 #!/bin/bash
 # Purpose: Generate keys for new user or an existing user requiring a new key
-# Usage: gpg-key-gen.sh 
-# e.g. ./gpg-key-gen.sh 
+# Usage: generate-keypair.sh 
+# e.g. ./generate-keypair.sh 
 
 # Parameters
 

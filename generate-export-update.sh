@@ -8,6 +8,6 @@
 # Constants
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-${DIR?}/gpg-key-gen.sh
-${DIR?}/gpg-export.sh --noninteractive
-${DIR?}/gpg-update-recipients.sh --noninteractive
+${DIR?}/generate-keypair.sh
+${DIR?}/export-public-key.sh --noninteractive
+${DIR?}/update-recipients.sh --noninteractive

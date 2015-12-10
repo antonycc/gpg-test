@@ -1,8 +1,8 @@
 #!/bin/bash
 # Purpose: Export a key so it can be shared via the repository
-# Usage: gpg-export.sh [--noninteractive]
-# e.g. ./gpg-export.sh
-#      ./gpg-export.sh --noninteractive
+# Usage: export-public-key.sh [--noninteractive]
+# e.g. ./export-public-key.sh
+#      ./export-public-key.sh --noninteractive
 
 # Parameters
 NON_INTERACTIVE=$([ "${1}" == "--noninteractive" ] && echo "true" || echo "false")

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Purpose: Import all the a public key from this folder into the local key chain
-# Usage: gpg-import.sh 
-# e.g. ./gpg-import.sh 
+# Usage: import-public-key.sh 
+# e.g. ./import-public-key.sh 
 
 # Parameters
 

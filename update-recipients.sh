@@ -1,15 +1,15 @@
 #!/bin/bash
 # Purpose: Add a UID to the signers list
-# Usage: gpg-update-recipients.sh  [--noninteractive]
-# e.g. ./gpg-update-recipients.sh 
-#      ./gpg-update-recipients.sh --noninteractive
+# Usage: update-recipients.sh  [--noninteractive]
+# e.g. ./update-recipients.sh 
+#      ./update-recipients.sh --noninteractive
 
 # Parameters
 NON_INTERACTIVE=$([ "${1}" == "--noninteractive" ] && echo "true" || echo "false")
 
 # Constants
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-RECIPIENTS_FILE="${DIR?}/gpg-recipients.txt"
+RECIPIENTS_FILE="${DIR?}/recipients.txt"
 OPTIONS_FILE="${DIR?}/gpg-options.conf"
 TMP_FILE="./tmp_${RANDOM?}"
 
