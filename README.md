@@ -27,6 +27,7 @@ New contributor on-boarding
 - Generates keypair (RSA and RSA, 2048)
 - Exports public key
 - Adds public key to shared repository
+
 2 [Existing contributor]
 --
 - Updates workspace from shared repository
@@ -34,8 +35,9 @@ New contributor on-boarding
 - Decrypts sensitive material
 - Encrypts using current public keys
 - Updates shared repository with encrypted sensitive material
---
+
 3 [New contributor] 
+--
 - Updates workspace from shared repository
 - Decrypts sensitive material in workspace
 
