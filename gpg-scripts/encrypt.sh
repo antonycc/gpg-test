@@ -14,10 +14,10 @@ OPTIONS_FILE="${SCRIPTS_DIR?}/gpg-options.conf"
 TMP_FILE="./tmp_${RANDOM?}"
 
 # Ensure all the public keys are imported
-ls -1 *.public |
+ls -1 "${RECIPIENTS_DIR?}"/*.public |
 while read PUBLIC_KEY_FILE
 do
-   CMD="gpg --options \"${OPTIONS_FILE?}\" --import \"${RECIPIENTS_DIR?}/${PUBLIC_KEY_FILE?}\""
+   CMD="gpg --options \"${OPTIONS_FILE?}\" --import \"${PUBLIC_KEY_FILE?}\""
    echo $CMD
    eval $CMD
 done
@@ -36,8 +36,8 @@ done
 
 # Encrypt the file using the recipients
 RECIPIENTS=$( cat "${TMP_FILE?}" | tr "\n" " " )
-echo "Encrypting for recipients: \"${RECIPIENTS}\""
-CMD="gpg --options \"${OPTIONS_FILE?}\" --output \"${FILE_CLEAR?}.gpg\" --encrypt \"${RECIPIENTS?}\" \"${FILE_CLEAR?}\""
+#echo "Encrypting for recipients: \"${RECIPIENTS}\""
+CMD="gpg --options \"${OPTIONS_FILE?}\" --output \"${FILE_CLEAR?}.gpg\" --encrypt ${RECIPIENTS?} \"${FILE_CLEAR?}\""
 echo $CMD
 eval $CMD
 rm "${TMP_FILE?}"
