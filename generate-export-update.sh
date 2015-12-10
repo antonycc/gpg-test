@@ -9,5 +9,5 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ${DIR?}/gpg-key-gen.sh
-${DIR?}/gpg-export.sh
-${DIR?}/gpg-update-recipients.sh
+${DIR?}/gpg-export.sh --noninteractive
+${DIR?}/gpg-update-recipients.sh --noninteractive
