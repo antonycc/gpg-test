@@ -4,6 +4,15 @@ A set of wrapper scripts and common config to create a confidential circle of tr
 
 Todate this project is an exploration of the PGP tool. When (if) mature scripted tests will accompany the project to aid extension without regression.
 
+System requirements (general)
+==
+- Bash terminal
+- gpg
+
+Cugwin
+--
+- gnupg: https://sourceforge.net/projects/libusb-win32/files/libusb-win32-releases/1.2.6.0/libusb-win32-devel-filter-1.2.6.0.exe
+
 TODO
 ==
 - Specify key size in config (Cygwin's gnupg takes up to 4096 on the command line)
@@ -41,16 +50,6 @@ New contributor on-boarding
 - Updates workspace from shared repository
 - Decrypts sensitive material in workspace
 
-
-Test secure storage of sensitive information using public private keys
-Docs:
-https://gnupg.org/documentation/howtos.html
-http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html
-https://www.gnupg.org/gph/de/manual/r1023.html
-https://www.gnupg.org/documentation/manuals/gnupg/
-
-gnupg
-https://sourceforge.net/projects/libusb-win32/files/libusb-win32-releases/1.2.6.0/libusb-win32-devel-filter-1.2.6.0.exe
 
 Examples - Cygwin
 ==
@@ -215,3 +214,11 @@ Decrypting a shared secret to the environment (3)
     Antonys-MacBook-Pro:gpg-test antony$ echo $SECRET1
     this-is-a-secret-one
     Antonys-MacBook-Pro:gpg-test antony$ 
+
+
+Further reading
+==
+- https://gnupg.org/documentation/howtos.html
+- http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html
+- https://www.gnupg.org/gph/de/manual/r1023.html
+- https://www.gnupg.org/documentation/manuals/gnupg/
