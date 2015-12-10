@@ -121,10 +121,8 @@ Generating a keypair and exporting a public key (1)
     uid       [ultimate] test10 <test10@example.com>
     sub   rsa2048/CB700527 2015-12-10
 
-    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --output 
-    "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test10@example.com.public" --export "test10 <test10@example.com>"
-    Exported public key: -rw-r--r--  1 antony  staff  1694 10 Dec 13:41 
-    /Users/antony/projects/gpg-test/gpg-scripts/../recipients/test10@example.com.public
+    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --output "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test10@example.com.public" --export "test10 <test10@example.com>"
+    Exported public key: -rw-r--r--  1 antony  staff  1694 10 Dec 13:41 /Users/antony/projects/gpg-test/gpg-scripts/../recipients/test10@example.com.public
     Antonys-MacBook-Pro:gpg-test antony$ 
 
 
@@ -132,39 +130,31 @@ Importing public keys and encrypting a secret (2)
 --
 
     Antonys-MacBook-Pro:gpg-test antony$ ./gpg-scripts/encrypt.sh example-secret.txt 
-    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import 
-    "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test10@example.com.public"
+    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test10@example.com.public"
     gpg: key B64BFE0E: "test10 <test10@example.com>" not changed
     gpg: Total number processed: 1
     gpg:              unchanged: 1
-    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import 
-    "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test2@example.com.public"
+    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test2@example.com.public"
     gpg: key 87513011: "test2 <test2@example.com>" not changed
     gpg: Total number processed: 1
     gpg:              unchanged: 1
-    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import 
-    "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test3@example.com.public"
+    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test3@example.com.public"
     gpg: key C3DE6EBB: "test3 <test3@example.com>" not changed
     gpg: Total number processed: 1
     gpg:              unchanged: 1
-    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import 
-    "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test6@example.com.public"
+    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test6@example.com.public"
     gpg: key 66DB8C9C: "Test6 <test6@example.com>" not changed
     gpg: Total number processed: 1
     gpg:              unchanged: 1
-    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import 
-    "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test8@example.com.public"
+    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test8@example.com.public"
     gpg: key AD17C38F: "Test8 <test8@example.com>" not changed
     gpg: Total number processed: 1
     gpg:              unchanged: 1
-    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import 
-    "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test9@example.com.public"
+    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --import "/Users/antony/projects/gpg-test/gpg-scripts/../recipients/test9@example.com.public"
     gpg: key 8E79C987: "test9 <test9@example.com>" not changed
     gpg: Total number processed: 1
     gpg:              unchanged: 1
-    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --output "example-secret.txt.gpg" 
-    --encrypt --recipient "test2 <test2@example.com>" --recipient "test3 <test3@example.com>" --recipient "Test6 <test6@example.com>"
-    --recipient "Test8 <test8@example.com>" --recipient "test9 <test9@example.com>" --recipient "test10 <test10@example.com>" "example-secret.txt"
+    gpg --options "/Users/antony/projects/gpg-test/gpg-scripts/gpg-options.conf" --output "example-secret.txt.gpg" --encrypt --recipient "test2 <test2@example.com>" --recipient "test3 <test3@example.com>" --recipient "Test6 <test6@example.com>" --recipient "Test8 <test8@example.com>" --recipient "test9 <test9@example.com>" --recipient "test10 <test10@example.com>" "example-secret.txt"
     Antonys-MacBook-Pro:gpg-test antony$ 
 
 
